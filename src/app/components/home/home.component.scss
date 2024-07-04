@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+
+}
+
+.item {
+    height: 2rem;
+    background: #f9fafb;
+    color: #374151;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+}

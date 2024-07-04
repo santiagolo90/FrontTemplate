@@ -1,0 +1,39 @@
+
+
+<div class="container">
+    <div class="item">
+        <span>{{nestjs()}}</span>
+    </div>
+    <div class="item">
+        <span>{{dotnet()}}</span>
+    </div>
+</div>
+<div class="card">
+    <p-table
+        [value]="auditDto()"
+        [paginator]="true"
+        [rows]="5"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        [rowsPerPageOptions]="[5, 10, 20]"
+        [loading]="loading"
+    >
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:25%">Id</th>
+                <th style="width:25%">Route</th>
+                <th style="width:25%">Ip</th>
+                <th style="width:25%">Method</th>
+                <th style="width:25%">Origin</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-audit>
+            <tr>
+                <td>{{ audit.id }}</td>
+                <td>{{ audit.route }}</td>
+                <td>{{ audit.ip }}</td>
+                <td>{{ audit.method }}</td>
+                <td>{{ audit.origin }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
